@@ -1,0 +1,68 @@
+/* Author: Brady Lange */
+/* Date: 12/5/17 */
+
+/*Body styles*/
+body {
+	width: 95%;
+	margin:0 auto;
+	border: 2px solid red;
+}
+
+/*Table styles*/
+table {
+	width:100%;
+	margin:0 auto;
+	border-collapse:collapse;
+}
+td {
+	width:50%;
+	border:1px solid black;
+}
+
+/*Buttons styles*/
+#calc, #reload {
+	border-radius:8px;
+}
+.buttonstyles td {
+	border:none;
+}
+.buttonstyles input {
+	margin-left:10px;
+}
+
+/*Radio option styles*/
+.radiostyles label {
+	display:block;
+}
+/*Radio option disc*/
+#personal, #busi, #edu {
+	float:left;
+}
+
+/*Legend element of the outputs styles*/
+.outputtitle {
+	border:2px solid grey;
+	float:right;
+	color: red;
+	font-weight:bold;
+	width:auto;
+}
+/*Output fields span element styles*/
+.outputtitle span {
+	color: black;
+}
+/*Output fields table data cells styles*/
+.outputfield {
+	border:none;
+}
+.outputfield input {
+	float:left;
+}
+#dollartotal {
+	margin-left:24px;
+}
+
+/*Student discount checkbox styles*/
+#stu {
+	float:left;
+}

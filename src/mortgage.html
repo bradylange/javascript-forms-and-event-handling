@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<!--Author: Brady Lange
+	  Date: 12/5/17
+      Exercise 11 - Mortgage Calculator
+	-->
+	<head>
+		<title>Financial Calculator</title>
+		
+		<script src="main.js"></script>
+		
+		<link href="main.css" rel="stylesheet" type="text/css">
+		
+	</head>
+	<body>
+			<p>
+				Enter the amount of the mortgage, change the yearly interests
+				rate in percentage (e.g., 8.5% = 8.5) if you are quoted a different
+				rate, and select Length of loan in number of years. Click the "Calculate" button
+				to view the monthly payment. Click the "Reset" button to clear the form. For 
+				personal and business loans there will be a $1000.00 and $500.00 origination 
+				fees that will be included in monthly payments. There is no origination fees
+				for education loans.
+			</p>
+			<form name="fincalc" id="fincalc">
+				<table>
+
+					<!--Loan option-->
+					<tr class="radiostyles">
+						<td>
+							Type of loan:
+						</td>
+						<td>
+							<label for="personal">Personal ($1000 origination fee)
+							<input type="radio" name="type" id="personal" value="Personal ($1000 origination fee)" checked></label>
+							<label for="busi">Business ($500 origination fee)
+							<input type="radio" name="type" id="busi" value="Business ($500 origination fee)"></label>
+							<label for="edu">Education
+							<input type="radio" name="type" id="edu" value="Education"></label>
+						</td>
+					</tr>
+				
+					<!--User input for loan amount-->
+					<tr>
+						<td>
+							Loan Amount:
+						</td>
+						<td>
+							<input name="amount" id="amount" value="" type="number">
+						</td>
+					</tr>
+					
+					<!--Interest rate input-->
+					<tr>
+						<td>
+							Interest Rate IN decimal (e.g., 8.5% = 8.5):
+						</td>
+						<td>
+							<input name="interest" id="interest" value="7.5" type="number">
+						</td>
+					</tr>
+					
+					<!--Length of loan-->
+					<tr>
+						<td>
+							Length of loan in years:
+						</td>
+						<td>
+							<select name="years" id="years">
+								<option selected>5</option>
+								<option>10</option>
+								<option>15</option>
+								<option>20</option>
+								<option>25</option>
+								<option>30</option>
+							</select>
+						</td>
+					</tr>
+					
+					<!--Full-time student option-->
+					<tr>
+						<td>
+							Full-time student:
+						</td>
+						<td>
+							<label for="stu">(get 1% rate discount)</label>
+							<input type="checkbox" id="stu" value="get 1% rate discount">
+						</td>
+					</tr>
+					
+					<!--Button that calculates the monthly and total payments-->
+					<tr class="buttonstyles">
+						<td>
+							<input type="button" id="calc" name="calc" value="Calculate Monthly Payments" onclick="showVal('amount');">
+						
+					<!--Button that resets the form-->
+							<input type="button" id="reload" name="reload" value="Reload" onclick="resetButton();">
+						</td>
+					</tr>
+					
+					<!--Monthly payments-->
+					<tr>
+						<td class="outputtitle">
+							Monthly Payments <span>$</span>
+						</td>
+						<td class="outputfield">
+							<input id="monthpay" name="monthpay" value="" onclick="showVal();" READONLY class="output">
+						</td>
+					</tr>
+					
+					<!--Total payments-->
+					<tr>
+						<td class="outputtitle" id="outputtotalid">
+							Total Payments <span id="dollartotal">$</span>
+						</td>
+						<td class="outputfield">
+							<input id="total" name="total" value="" onclick="showVal();" READONLY class="output">
+						</td>
+					</tr>
+			
+			
+			
+				</table>
+			</form>
+				
+
+
+	</body>
+
+</html>
